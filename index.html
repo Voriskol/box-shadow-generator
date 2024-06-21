@@ -13,84 +13,104 @@
         <p class="header__text">Generate CSS box shadow with ease.</p>
       </div>
     </header>
-    <main>
+    <main class="main">
       <section class="content">
-        <div class="container">
-          <h2 class="content__title">Settings</h2>
-          <div class="checkbox">
-            <label for="inside">Тень внутри элемента</label>
-            <input type="checkbox" id="inside" />
+        <form class="form">
+          <div class="container">
+            <h2 class="content__title">Settings</h2>
+            <div class="selectors">
+              <div class="form-row">
+                <label for="inside">Тень внутри элемента</label>
+                <input type="checkbox" id="inside" />
+              </div>
+              <div class="form-row">
+                <label for="translateX">Смещение по горизонтали</label>
+                <input
+                  type="range"
+                  id="translateX"
+                  value="15"
+                  min="-25"
+                  max="25"
+                  step="1"
+                />
+              </div>
+              <div class="form-row">
+                <label for="translateY">Смещение по вертикали</label>
+                <input
+                  type="range"
+                  id="translateY"
+                  value="10"
+                  min="-25"
+                  max="25"
+                  step="1"
+                />
+              </div>
+              <div class="form-row">
+                <label for="blur">Размытие</label>
+                <input
+                  type="range"
+                  id="blur"
+                  value="20"
+                  min="0"
+                  max="100"
+                  step="1"
+                />
+              </div>
+              <div class="form-row">
+                <label for="stretching">Растяжение</label>
+                <input
+                  type="range"
+                  id="stretching"
+                  value="10"
+                  min="-25"
+                  max="25"
+                  step="1"
+                />
+              </div>
+              <div class="form-row">
+                <label for="color">Цвет</label>
+                <input type="color" id="color" min="-25" max="25" step="1" />
+              </div>
+              <div class="form-row">
+                <label for="opacity">Прозрачность</label>
+                <input
+                  type="range"
+                  id="opacity"
+                  value="0.5"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                />
+              </div>
+              <div class="form-row">
+                <label for="resultCSS">CSS код</label>
+                <textarea
+                  name="css-code"
+                  id="resultCSS"
+                  cols="30"
+                  rows="5"
+                  readonly
+                >
+                  content</textarea
+                >
+              </div>
+            </div>
           </div>
-          <div class="form-row">
-            <label for="translateX">Смещение по горизонтали</label>
-            <input
-              type="range"
-              id="translateX"
-              value="0"
-              min="-25"
-              max="25"
-              step="1"
-            />
-          </div>
-          <div class="form-row">
-            <label for="translateY">Смещение по вертикали</label>
-            <input
-              type="range"
-              id="translateY"
-              value="0"
-              min="-25"
-              max="25"
-              step="1"
-            />
-          </div>
-          <div class="form-row">
-            <label for="blur">Размытие</label>
-            <input
-              type="range"
-              id="blur"
-              value="0"
-              min="-25"
-              max="25"
-              step="1"
-            />
-          </div>
-          <div class="form-row">
-            <label for="stretching">Смещение по горизонтали</label>
-            <input
-              type="range"
-              id="stretching"
-              value="0"
-              min="-25"
-              max="25"
-              step="1"
-            />
-          </div>
-          <div class="form-row">
-            <label for="color">Цвет</label>
-            <input type="color" id="color" min="-25" max="25" step="1" />
-          </div>
-          <div class="form-row">
-            <label for="opacity">Прозрачность</label>
-            <input
-              type="range"
-              id="opacity"
-              value="0"
-              min="0"
-              max="10"
-              step="0.01"
-            />
-          </div>
-          <h2 class="content__title">Result</h2>
-          <div class="result"></div>
-          <textarea name="css-code" id="" cols="30" rows="5" readonly>
-content</textarea
-          >
-        </div>
+        </form>
       </section>
+      <aside class="aside">
+        <div class="container">
+          <h2 class="content__title">Example</h2>
+          <div class="result"></div>
+        </div>
+      </aside>
     </main>
     <footer class="footer">
       <div class="container">
-        <p class="footer__text">Created by <a href="https://github.com/Voriskol">Voriskol</a></p>
+        <p class="footer__text">
+          Created by <a href="https://github.com/Voriskol">Voriskol</a>
+        </p>
+      </div>
     </footer>
     <script src="/js/main.js"></script>
   </body>
