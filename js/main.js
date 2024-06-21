@@ -17,6 +17,8 @@ function generateCSS() {
 
   let opacity = document.getElementById("opacity").value;
 
+  let blockColor = document.getElementById("colorBlock").value;
+
   let resultCode = `${translateX}px ${translateY}px ${blur}px ${stretch}px
   rgba(${parseInt(colorR, 16)}, ${parseInt(colorG, 16)}, ${parseInt(
     colorB,
@@ -28,6 +30,7 @@ function generateCSS() {
 
   let example = document.querySelector(".result");
   example.style.boxShadow = resultCode;
+  example.style.background = blockColor;
 }
 generateCSS();
 
